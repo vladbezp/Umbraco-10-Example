@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home Page</summary>
 	[PublishedModel("homePage")]
-	public partial class HomePage : PublishedContentModel, IHeaderProperties, ISiteNavigationProperties
+	public partial class HomePage : PublishedContentModel, IFooterPoperties, IHeaderProperties, ISiteNavigationProperties
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -48,6 +48,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Footer Social Links: Enter the social links to display in the footer
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.7.0+fd043f6")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerSocialLinks")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.SocialLink> FooterSocialLinks => global::Umbraco.Cms.Web.Common.PublishedModels.FooterPoperties.GetFooterSocialLinks(this, _publishedValueFallback);
 
 		///<summary>
 		/// Header Image: Choose the header image for this page
